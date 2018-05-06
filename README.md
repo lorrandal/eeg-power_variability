@@ -16,7 +16,7 @@ cerebral artery with sampling frequency Fs BFV = 0.5 Hz.
 `F4C4` : EEG (mV) measured from a frontal derivation located on the right 
 side of the scalp with sampling frequency Fs EEG = 512 Hz.
 
-To extract the delta component (`DELTA2`: 0-4Hz) from `F4C4` a **low pass filter** was used, the optimum order of 5 was found with 
+To extract the delta component (`DELTA2`: 0-4Hz) from `F4C4` a **lowpass filter** was used, the optimum order of 5 was found with 
 the `ellipord` function while the `b` and `a` parameters were obtained thanks to the `ellip` function. To eliminate phase distortion,
 Forward-Backward filtering was used using the `filtfilt` function.
 
@@ -28,9 +28,19 @@ The **Difference equation** of the 5th order filter is:
 
 ![alt text](https://github.com/lorrandal/eeg-power_variability/blob/master/plot1.svg)
 
+**Figure 1:** Frequency Response of the lowpass filter
+
+
+
 The result of the filtering process is `DELTA2`, shown in Fig 2.:
 
 ![alt text](https://github.com/lorrandal/eeg-power_variability/blob/master/plot2.svg)
+
+**Figure 2:** Signals `F4C4` and `DELTA2` with mean and SD intervals  
+
+
+
+
 
 Once the delta component (`DELTA2` signal) had been obtained through filtering, it was segmented into 150 segments 
 by 1024 samples at 2-second intervals. To construct the **Power Variability** signal (`DELTA2_PV`), the spectrum of each segment
@@ -42,9 +52,18 @@ The obtained signal `DELTA2_PV` is shown in Fig. 3:
 
 ![alt text](https://github.com/lorrandal/eeg-power_variability/blob/master/plot3.svg)
 
+**Figure 3:** Power Variability in the delta band
+
+
+
 The spectrum of `DELTA2_PV` signal, obtained by the Periodogram method is shown in Fig 4:
 
 ![alt text](https://github.com/lorrandal/eeg-power_variability/blob/master/plot4.svg)
+
+**Figure 4:** Spectrum of `DELTA2_PV`  
+
+
+
 
 Subsequently the **AR model** of optimal order was identified on the `DELTA2_PV` signal.
 To find the optimal, three indicators were evaluated for every order between [1:20]: **MSE**, **Akaike's Final Prediction 
@@ -53,11 +72,22 @@ Error (FPE)**, **Akaike Information Criterion (AIC)**. AIC and FPE returned 1 as
 The results for MSE, AIC and FPE are shown in Fig. 5, Fig. 6, Fig. 7:
 
 ![alt text](https://github.com/lorrandal/eeg-power_variability/blob/master/plot5.svg)
+ 
+
+**Figure 5:** MSE for 20 model orders
 
 
 ![alt text](https://github.com/lorrandal/eeg-power_variability/blob/master/plot6.svg)
+ 
+
+**Figure 6:** AIC for 20 model orders 
+
+
 
 ![alt text](https://github.com/lorrandal/eeg-power_variability/blob/master/plot7.svg)
+ 
+
+**Figure 7:** FPE for 20 model orders  
 
 **Anderson–Darling test** was carried out to verify the whiteness of the prediction error and the level of significance
 was set at α = 5%.
@@ -65,6 +95,9 @@ was set at α = 5%.
 The results of Anderson test are show in Fig. 8:
 
 ![alt text](https://github.com/lorrandal/eeg-power_variability/blob/master/plot8.svg)
+
+**Figure 8:** Anderson–Darling test, with α = 5%
+
 
 Accordingly, by adopting order 1, the **difference equation** of the **AR** model is:
 
@@ -76,6 +109,9 @@ The model cannot explain the data properly and seems to do oversmoothing.
 The **Power Spectral Density** obtained in this way is shown in Fig. 9:
 
 ![alt text](https://github.com/lorrandal/eeg-power_variability/blob/master/plot9.svg)
+
+**Figure 9:** Power Spectral Density obtained from the AR model
+
 
 As a consequence of what has just been said, the **Spectral Coherence** is calculated between 
 `DELTA2_PV` obtained by the Periodogram's method and `BFV2`.
@@ -89,6 +125,9 @@ possible casuality link between `DELTA2_PV` and `BFV2`.
 Coherence function is shown in Fig. 10:
 
 ![alt text](https://github.com/lorrandal/eeg-power_variability/blob/master/plot10.svg)
+
+**Figure 10:** Spectral Coherence `DELTA2_PV` and `BFV2`
+
 
 
 
