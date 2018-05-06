@@ -55,7 +55,7 @@ xlim([0 20])
 % Round the coefficients
 b = roundn(b, -4);  
 a = roundn(a, -4); 
-disp(['Difference equation of a ' num2str(order) 'th order filter ' ])
+disp(['Difference equation of the ' num2str(order) 'th order filter ' ])
 disp('')
 disp(['y(n) = ' num2str(-a(2)) '*y(n-1)' num2str(-a(3)) '*y(n-2) + ' num2str(-a(4)) '*y(n-3)' ...
     num2str(-a(5)) '*y(n-4) + ' num2str(-a(6)) '*y(n-5) + ' num2str(b(1)) '*x(n)' num2str(b(2)) '*x(n-1) + ' ...
