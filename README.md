@@ -28,7 +28,7 @@ The **Difference equation** of the 5th order filter is:
 
 *Gain* and *Phase* of the **Frequency Response** of the filter are shown in Fig. 1:
 
-![alt text](https://github.com/lorrandal/eeg-power_variability/blob/master/plot1.svg)
+![alt text](plots/plot1.svg)
 
 **Figure 1:** Frequency Response of the lowpass filter
 
@@ -36,7 +36,7 @@ The **Difference equation** of the 5th order filter is:
 
 The result of the filtering process is `DELTA2`, shown in Fig 2.:
 
-![alt text](https://github.com/lorrandal/eeg-power_variability/blob/master/plot2.svg)
+![alt text](plots/plot2.svg)
 
 **Figure 2:** Signals `F4C4` and `DELTA2` with mean and SD intervals  
 
@@ -52,7 +52,7 @@ each segment.
 
 The obtained signal `DELTA2_PV` is shown in Fig. 3:
 
-![alt text](https://github.com/lorrandal/eeg-power_variability/blob/master/plot3.svg)
+![alt text](plots/plot3.svg)
 
 **Figure 3:** Power Variability in the delta band
 
@@ -60,7 +60,7 @@ The obtained signal `DELTA2_PV` is shown in Fig. 3:
 
 The spectrum of `DELTA2_PV` signal, obtained by the Periodogram method is shown in Fig 4:
 
-![alt text](https://github.com/lorrandal/eeg-power_variability/blob/master/plot4.svg)
+![alt text](plots/plot4.svg)
 
 **Figure 4:** Spectrum of `DELTA2_PV`  
 
@@ -73,20 +73,20 @@ Error (FPE)**, **Akaike Information Criterion (AIC)**. AIC and FPE returned 1 as
 
 The results for MSE, AIC and FPE are shown in Fig. 5, Fig. 6, Fig. 7:
 
-![alt text](https://github.com/lorrandal/eeg-power_variability/blob/master/plot5.svg)
+![alt text](plots/plot5.svg)
  
 
 **Figure 5:** MSE for 20 model orders
 
 
-![alt text](https://github.com/lorrandal/eeg-power_variability/blob/master/plot6.svg)
+![alt text](plots/plot6.svg)
  
 
 **Figure 6:** AIC for 20 model orders 
 
 
 
-![alt text](https://github.com/lorrandal/eeg-power_variability/blob/master/plot7.svg)
+![alt text](plots/plot7.svg)
  
 
 **Figure 7:** FPE for 20 model orders  
@@ -96,7 +96,7 @@ was set at α = 5%.
 
 The results of Anderson test are show in Fig. 8:
 
-![alt text](https://github.com/lorrandal/eeg-power_variability/blob/master/plot8.svg)
+![alt text](plots/plot8.svg)
 
 **Figure 8:** Anderson–Darling test, with α = 5%
 
@@ -110,7 +110,7 @@ Then, the optimal order AR model is used to estimate the spectrum of DELTA2 PV s
 The model cannot explain the data properly and seems to do oversmoothing.
 The **Power Spectral Density** obtained in this way is shown in Fig. 9:
 
-![alt text](https://github.com/lorrandal/eeg-power_variability/blob/master/plot9.svg)
+![alt text](plots/plot9.svg)
 
 **Figure 9:** Power Spectral Density obtained from the AR model
 
@@ -126,7 +126,7 @@ possible casuality link between `DELTA2_PV` and `BFV2`.
 
 Coherence function is shown in Fig. 10:
 
-![alt text](https://github.com/lorrandal/eeg-power_variability/blob/master/plot10.svg)
+![alt text](plots/plot10.svg)
 
 **Figure 10:** Spectral Coherence between `DELTA2_PV` and `BFV2`
 
