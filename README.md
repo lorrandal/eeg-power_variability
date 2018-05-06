@@ -8,6 +8,8 @@ pacemaker, Neuroimage 2013*). The study is now extended to subjects studied unde
 The dataset used was provided in the Biological Signals Processing course, held by Professor Toffolo, Bioengineering,
 Department of Information Engineering, University of Padua, academic year 2014/2015.
 
+The code is contained in the scripit `main.m`.
+
 The two signals provided in the `data` folder are:
 
 `BFV2` : blood flow rate (cm/sec) measured with ecodoppler at the right 
