@@ -26,7 +26,7 @@ The **Difference equation** of the 5th order filter is:
 
 *Gain* and *Phase* of the **Frequency Response** of the filter are shown in Fig. 1:
 
-![Fig. 1](https://github.com/lorrandal/eeg-power_variability/tree/master/plots/plot1.svg)
+![alt text](https://github.com/lorrandal/eeg-power_variability/blob/master/plot1.svg)
 
 The result of the filtering process is `DELTA2`, shown in Fig 2.:
 
