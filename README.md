@@ -126,7 +126,7 @@ Coherence function is shown in Fig. 10:
 
 ![alt text](https://github.com/lorrandal/eeg-power_variability/blob/master/plot10.svg)
 
-**Figure 10:** Spectral Coherence `DELTA2_PV` and `BFV2`
+**Figure 10:** Spectral Coherence between `DELTA2_PV` and `BFV2`
 
 
 
